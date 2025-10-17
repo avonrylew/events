@@ -1,18 +1,17 @@
 import Benchmark from 'benchmark';
 //@ts-ignore
-import { EventEmitter as CustomEmitter } from '../index.min';
+import { EventEmitter as CustomEmitter } from '../dist/';
 import { EventEmitter as TseepEmitter } from 'tseep';
 import { TypedEmitter } from 'tiny-typed-emitter';
 import EventEmitter3 from 'eventemitter3';
 
 console.log('='.repeat(80));
-console.log('EVENT EMITTER BENCHMARK COMPARISON');
+console.log('EVENT EMITTER BENCHMARK COMPARISON (FAIR)');
 console.log('='.repeat(80));
 console.log();
 
 const suite = new Benchmark.Suite();
 
-// Pre-setup instances for single listener test
 //@ts-ignore
 const customEE1 = new CustomEmitter();
 const tseepEE1 = new TseepEmitter();
@@ -24,7 +23,6 @@ tseepEE1.on('test', () => {});
 tinyEE1.on('test', () => {});
 ee3EE1.on('test', () => {});
 
-// Pre-setup instances for 10 listeners test
 //@ts-ignore
 const customEE10 = new CustomEmitter();
 const tseepEE10 = new TseepEmitter();
