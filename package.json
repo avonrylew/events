@@ -1,25 +1,24 @@
 {
   "name": "@avonrylew/events",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A lightweight, strongly typed, featureful and high-performance event emitter for modern JavaScript runtimes. Built with speed, simplicity and feature completeness in mind.",
   "keywords": [
     "event",
     "emitter",
     "typescript",
-    "fast",
-    "tiny"
+    "fast"
   ],
-  "homepage": "https://github.com/avonryle/events#readme",
-  "bugs": "https://github.com/avonryle/events/issues",
+  "homepage": "https://github.com/avonrylew/events#readme",
+  "bugs": "https://github.com/avonrylew/events/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avonryle/events.git"
+    "url": "git+https://github.com/avonrylew/events.git"
   },
   "license": "MIT",
   "author": "avonryle",
-  "exports": "./index.min.js",
+  "exports": "./dist/index",
   "scripts": {
-    "build": "bun build ./index.ts --outfile ./index.min.js --minify --target node",
+    "build": "bun run bundle",
     "test:bench": "bun run __tests__/benchmark.ts",
     "test:feature": "bun run __tests__/feature.ts",
     "test:memory": "bun run __tests__/memory.ts"
