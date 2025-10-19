@@ -4,25 +4,24 @@ Peak event emitter
 
 | Category | Description | Status |
 |-----------|--------------|--------|
-|  **Wildcard / Namespaced Events** | Listen to grouped events like `user.*` | ❌ Not yet |
+|  **Wildcard / Namespaced Events** | Listen to grouped events like `user.*` | ✅ Implemented |
 |  **Event Context / this Binding** | Access emitter or context inside callbacks | ✅ Implemented |
 |  **Error Event Handling** | Dedicated `"error"` event for exceptions | ❌ Not yet (partial) |
-|  **Max Listeners Warnings** | Prevent memory leaks | ❌ Not yet (does not enforce due to performance hits, will try to work around it.) |
+|  **Max Listeners Warnings** | Prevent memory leaks | ✅ Implemented |
 |  **Event Propagation Control** | Stop propagation at any listener | ❌ Not yet |
-|  **Typed Async Streams** | Fully typed reactive pipelines | ⚙️ Partial |
+|  **Typed Async Streams** | Fully typed reactive pipelines |✅ Implemented |
 |  **Dynamic Listener Prioritization** | Change listener priority at runtime | ❌ Not yet (planned for 0.0.6, creates chainable .setPriority() |
 |  **Listener Metadata Exposure** | Access TTL, priority, timestamp info | ✅ Implemented |
-|  **Batch Emit / Multiple Events** | Emit multiple events efficiently | ❌ Not yet (perfomance hits, might make a seperate API method? .batchEmit()? idk)|
-|  **Automatic Cleanup** | Remove orphaned listeners automatically | ❌ Not yet (planned for 0.0.6) |
-|  **Event Serialization & Transport** | WebSockets, IPC, Workers integration | ❌ Not yet (partial, has serialization and deserialization but no actual ws use) |
-|  **Observable / Promise Conversion** | RxJS or AsyncIterable support | ⚙️ Partial (not a priority, add more API methods under EventStreams) |
+|  **Batch Emit / Multiple Events** | Emit multiple events efficiently | ✅ Implemented |
+|  **Automatic Cleanup** | Remove orphaned listeners automatically | ✅ Implemented |
+|  **Event Transport** | WebSockets, IPC, Workers integration | ❌ Not yet |
+|  **Observable / Promise Conversion** | RxJS like operators| ✅ Implemented  |
 |  **Selective Cross-Emitter Piping** | Pipe only specific events | ✅ Implemented |
-|  **Global Event Throttling** | Rate limit high-volume events | ✅ Implemented |
+|  **Global Event Throttling** | Rate limit high-volume events | ❌ Not yet |
 |  **Stronger Generics** | Fully typed async streams | ✅ Implemented |
-|  **Fluent API / Chaining** | Chain `.on()`, `.once()`, `.map()`, `.pipe()` | ✅ Implemented |
-|  **Node.js API Compatibility** | Drop-in replacement for Node `EventEmitter` | ✅ Implemented |
-|  **Hot Reload / Live Update** | Replace listeners dynamically | ❌ Not yet (partial but i want it to better by chaining which it does not yet support) |
-|  **Advanced Event Filtering** | Regex / predicate-based routing | ❌ Not yet (planned for 0.0.6, adding pattern matching events aswell) |
+|  **Fluent API / Chaining** | Chain `.on()`, `.once()`, `.map()`, `.pipe()` | ❌ Not yet (partial) |
+|  **Hot Reload / Live Update** | Replace listeners dynamically | ❌ Not yet |
+|  **Advanced Event Filtering** | Regex / predicate-based routing | ❌ Not yet (planned for 0.0.6)|
 |  **Plugins** | Extend emitter with decorators (logging, metrics, analytics, debug, event validation and dedicated error handling) and Event Timeline/Graph for statistical purposes | ❌ Not yet (pain) |
 
 ---
